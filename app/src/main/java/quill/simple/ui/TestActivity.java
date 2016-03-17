@@ -1,7 +1,9 @@
-package quill.simple;
+package quill.simple.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import quill.simple.R;
 
 public class TestActivity extends AppCompatActivity {
 
