@@ -8,8 +8,6 @@ import android.content.pm.PackageManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
-import com.sixgui.tmaster.MyApplication;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 

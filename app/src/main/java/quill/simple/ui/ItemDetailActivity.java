@@ -10,7 +10,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
+
 import quill.simple.R;
+import quill.simple.fragment.ItemDetailFragment;
 
 /**
  * An activity representing a single Item detail screen. This

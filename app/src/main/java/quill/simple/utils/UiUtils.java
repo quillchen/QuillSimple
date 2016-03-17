@@ -13,7 +13,8 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.sixgui.tmaster.MyApplication;
+import quill.simple.MyApplication;
+
 
 public class UiUtils {
 
