@@ -1,4 +1,4 @@
-package quill.simple.builder;
+package quill.design.builder;
 
 public abstract class Builder {
 	public abstract void buildBoard(String board);

@@ -1,12 +1,9 @@
 package quill.simple;
 
-import android.util.Log;
-
 import org.junit.Test;
 
 import quill.simple.builder.Director;
 import quill.simple.builder.MacBuilder;
-import quill.simple.utils.SysUtils;
 
 import static org.junit.Assert.*;
 

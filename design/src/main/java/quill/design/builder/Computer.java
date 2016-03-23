@@ -1,4 +1,4 @@
-package quill.simple.builder;
+package quill.design.builder;
 
 public abstract class Computer {
 	private String board;
@@ -15,7 +15,7 @@ public abstract class Computer {
 	public abstract void setOS();
 	@Override
 	public String toString() {
-		return "Computer [board=" + board + ", display=" + display + "]";
+		return "Computer [board=" + board + ", display=" + display +", os="+os+ "]";
 	}
 	
 }

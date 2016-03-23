@@ -1,1 +1,1 @@
-include ':app', ':volleyutils', ':okhttputils'
+include ':app', ':volleyutils', ':okhttputils', ':design'

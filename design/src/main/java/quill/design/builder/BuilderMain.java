@@ -1,4 +1,4 @@
-package quill.simple.builder;
+package quill.design.builder;
 
 import android.test.AndroidTestCase;
 

@@ -1,4 +1,4 @@
-package quill.simple.builder;
+package quill.design.builder;
 
 public class Macbook extends Computer{
 
