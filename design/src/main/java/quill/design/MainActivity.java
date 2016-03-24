@@ -12,6 +12,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import quill.design.builder.CustomDialog;
+import quill.design.mvp.Mvp1Activity;
 import quill.design.ui.BaseActivity;
 import quill.design.ui.MvpActivity;
 
@@ -33,7 +34,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     }
 
     private void init() {
-        datas = new Class<?>[]{MvpActivity.class};
+        datas = new Class<?>[]{MvpActivity.class, Mvp1Activity.class};
         listview.setAdapter(new ArrayAdapter<Class<?>>(this, android.R.layout.simple_expandable_list_item_1, datas));
     }
 
