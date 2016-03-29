@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="quill.simple.ui.MultiActivity">
+    <TextView
+        android:id="@+id/tv_hello"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello World, MyScroler!" />
+
+
+    <quill.simple.view.MultiViewGroup
+        android:id="@+id/multi_viewgroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </quill.simple.view.MultiViewGroup>
+
+    <Button
+        android:id="@+id/bt_scrollLeft"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Scroller滑到下一屏" />
+
+    <Button
+        android:id="@+id/bt_scrollRight"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/bt_scrollLeft"
+        android:text="停止滑动" />
+</RelativeLayout>

@@ -11,7 +11,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import quill.simple.ui.ItemListActivity;
+import quill.simple.ui.MultiActivity;
 import quill.simple.ui.SettingsActivity;
+import quill.simple.ui.View1Activity;
 import quill.simple.ui.VolleyActivity;
 import quill.simple.ui.base.BaseActivity;
 
@@ -31,8 +33,8 @@ public class MainActivity extends BaseActivity {
     }
 
     private void initRecycler() {
-        classes = new Class[]{VolleyActivity.class,  SettingsActivity.class,
-                ItemListActivity.class};
+        classes = new Class[]{VolleyActivity.class,SettingsActivity.class,
+                ItemListActivity.class, MultiActivity.class, View1Activity.class};
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         MyAdapter adapter = new MyAdapter();

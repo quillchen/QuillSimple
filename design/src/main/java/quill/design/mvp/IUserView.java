@@ -7,6 +7,6 @@ public interface IUserView {
     int getId();
     String getName();
     String getInfo();
-    void setName();
-    void setInfo();
+    void setName(String name);
+    void setInfo(String info);
 }

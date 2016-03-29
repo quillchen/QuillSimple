@@ -1,8 +1,11 @@
 package quill.design.mvp;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import quill.design.utils.UiUtils;
 
@@ -11,39 +14,37 @@ import quill.design.utils.UiUtils;
  */
 public class UserModel {
 
-    public void insert(UserBean bean) {
+    private MyDatabaseHelper dbHelper;
+
+    public UserModel(Context context){
+        if (dbHelper==null)
+        dbHelper = new MyDatabaseHelper(context,MyDatabaseHelper.DB_NAEM,null,1);
+    }
+
+    public void insert(String uid,String name,String info) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("Uid",uid);
+        values.put("name",name);
+        values.put("info",info);
+        db.insert(MyDatabaseHelper.TABLE,null,values);
+    }
+
+    public void query(UserBean bean){
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select*from UserInfo where Uid like ?",
+                new String[]{"%" + bean.getId() + "%"});
+        if (cursor.moveToNext()){
+            bean.setName(cursor.getString(1));
+            bean.setInfo(cursor.getString(2));
+            Log.d("Mvp1","cursor.getColumnName(0)="+cursor.getColumnName(0)
+            +"cursor.getColumnName(1)="+cursor.getColumnName(1));
+        }
 
     }
 
     public void create(Context context) {
-        MyDatabaseHelper dbHelper = new MyDatabaseHelper(context, "Mvp1.db", null, 1);
         dbHelper.getWritableDatabase();
     }
 
-    class MyDatabaseHelper extends SQLiteOpenHelper{
-        public static final String CREATE_BOOK="create table UserInfo("
-                +"id integer primary key autoincrement,"
-                +"Uid integer,"
-                +"name text,"
-                +"info text)";
-
-
-        private final Context context;
-
-        public MyDatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-            super(context, name, factory, version);
-            this.context = context;
-        }
-
-        @Override
-        public void onCreate(SQLiteDatabase db) {
-            db.execSQL(CREATE_BOOK);
-            UiUtils.showToast("数据库创建成功");
-        }
-
-        @Override
-        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
-        }
-    }
 }

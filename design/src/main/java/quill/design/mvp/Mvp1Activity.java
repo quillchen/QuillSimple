@@ -35,7 +35,7 @@ public class Mvp1Activity extends AppCompatActivity implements IUserView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mvp1);
         ButterKnife.bind(this);
-        presenter1 = new Presenter1(this);
+        presenter1 = new Presenter1(this,this);
     }
 
     @OnClick({R.id.mvp1_insert, R.id.mvp1_query,R.id.mvp1_create})
@@ -45,7 +45,10 @@ public class Mvp1Activity extends AppCompatActivity implements IUserView {
                 presenter1.create(this);
                 break;
             case R.id.mvp1_insert:
-
+                String uid = etId.getText().toString().trim();
+                String name = etName.getText().toString().trim();
+                String info = etInfo.getText().toString().trim();
+                presenter1.insert(uid,name,info);
                 break;
             case R.id.mvp1_query:
 
@@ -69,12 +72,12 @@ public class Mvp1Activity extends AppCompatActivity implements IUserView {
     }
 
     @Override
-    public void setName() {
-
+    public void setName(String name) {
+        show.setText(name);
     }
 
     @Override
-    public void setInfo() {
+    public void setInfo(String info) {
 
     }
 
