@@ -12,7 +12,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import quill.design.builder.CustomDialog;
-import quill.design.mvp.Mvp1Activity;
+import quill.design.mvp.mvp1.Mvp1Activity;
 import quill.design.ui.BaseActivity;
 import quill.design.ui.MvpActivity;
 

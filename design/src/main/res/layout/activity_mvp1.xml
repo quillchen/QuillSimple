@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="quill.design.mvp.Mvp1Activity">
+    tools:context=".mvp.mvp1.Mvp1Activity">
     <EditText
         android:id="@+id/mvp1_id"
         android:layout_width="match_parent"

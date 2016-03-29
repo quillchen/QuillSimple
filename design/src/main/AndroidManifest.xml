@@ -18,7 +18,7 @@
         </activity>
         <activity android:name=".ui.BaseActivity" />
         <activity android:name=".ui.MvpActivity" />
-        <activity android:name=".mvp.Mvp1Activity"></activity>
+        <activity android:name=".mvp.mvp1.Mvp1Activity"></activity>
     </application>
 
 </manifest>
